@@ -87,3 +87,29 @@
   row-gap: 1.8em;
   margin: 0;
 }
+
+@media screen and (max-width: 800px) {
+  .meme__image {
+    width: 25em;
+  }
+  .meme__title {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .meme__image {
+    width: 15em;
+  }
+  .meme__title {
+    font-size: 1em;
+  }
+  .meme__icon {
+    background-size: 1em 1em;
+    width: 1em;
+    height: 1em;
+  }
+  .accordeon {
+    row-gap: 0.5em;
+  }
+}
