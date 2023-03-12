@@ -113,3 +113,9 @@
     row-gap: 0.5em;
   }
 }
+
+@media (hover: none) {
+  .meme:hover > .meme__image {
+    height: 0;
+  }
+}
