@@ -25,12 +25,17 @@
 
 .meme {
   display: block;
-  position: relative;
   transition: all 0.2s ease;
   background-color: transparent;
   border-radius: 1em;
   height: fit-content;
   border-bottom: 2px solid #000;
+}
+
+.meme__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
 }
 
 .meme:hover {
@@ -60,20 +65,17 @@
 }
 
 .meme__icon {
-  position: absolute;
-  top: 0;
-  right: 0;
   background-image: url('./images/plus.jpg');
   background-size: 2em 2em;
   width: 2em;
   height: 2em;
 }
 
-.accordeon__input:checked ~ .meme__icon {
+.accordeon__input:checked + .meme__wrapper .meme__icon {
   background-image: url('./images/minus.jpg');
 }
 
-.meme:hover > .meme__icon {
+.meme:hover .meme__wrapper .meme__icon {
   background-image: url('./images/minus.jpg');
 }
 
