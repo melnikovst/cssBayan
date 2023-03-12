@@ -30,6 +30,7 @@
   border-radius: 1em;
   height: fit-content;
   border-bottom: 2px solid #000;
+  padding-top: 1.7em;
 }
 
 .meme__wrapper {
@@ -93,7 +94,6 @@
   flex-direction: column;
   list-style: none;
   padding: 0;
-  row-gap: 1.8em;
   margin: 0;
 }
 
