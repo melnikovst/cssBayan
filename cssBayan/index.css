@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.app {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkgray;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+  padding: 1em 0 3em 0;
+  color: #fff;
+}
+
+.header__title {
+  margin: 0;
+}
+
+.meme:hover > .meme__image {
+  transform: scale(1);
+  height: 100%;
+}
+
+.meme {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+  background-color: transparent;
+  border-radius: 1em;
+  height: fit-content;
+  border-bottom: 2px solid #000;
+  padding-top: 1.7em;
+}
+
+.meme__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.meme:hover {
+  cursor: pointer;
+}
+
+.meme__title {
+  margin: 0;
+  font-size: 2em;
+  transition: all 0.2s ease;
+}
+
+.accordeon__input {
+  margin: 0;
+  width: 1.4em;
+  height: 1.4em;
+  background-color: #000;
+  display: none;
+}
+
+.accordeon__input:checked ~ .meme__image {
+  transform: scale(1);
+  height: 100%;
+}
+
+.meme__icon {
+  background-image: url('./images/plus.jpg');
+  background-size: 2em 2em;
+  width: 2em;
+  height: 2em;
+}
+
+.accordeon__input:checked + .meme__wrapper .meme__icon {
+  background-image: url('./images/minus.jpg');
+}
+
+.meme:hover .meme__wrapper .meme__icon {
+  background-image: url('./images/minus.jpg');
+}
+
+.meme__image {
+  margin-top: 1em;
+  transition: all 0.2s ease;
+  width: 30em;
+  height: 0;
+  transform: scale(0);
+  border-radius: 1em;
+}
+
+.accordeon {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .meme__image {
+    width: 25em;
+  }
+  .meme__title {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .meme__image {
+    width: 15em;
+  }
+  .meme__title {
+    font-size: 1em;
+  }
+  .meme__icon {
+    background-size: 1em 1em;
+    width: 1em;
+    height: 1em;
+  }
+  .accordeon {
+    row-gap: 0.5em;
+  }
+}
